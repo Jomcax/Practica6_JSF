@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Practica 6</title>
+    </h:head>
+    <h:body>
+        <h1>Los datos recibidos son:</h1>
+        <p>Producto: <h:outputText value="#{productoBean.producto}" /> </p>
+        <p>Categoria: 
+            <h:outputText value="#{productoBean.categoria}" />
+        </p>
+        <p>Existencia:<h:outputText value="#{productoBean.existencia}" /> </p>
+        <p>Precio:<h:outputText value="#{productoBean.precio}" /> </p>
+        <h:form>
+            <h:commandLink action="productos" value="Volver" />
+        </h:form>
+    </h:body>
+</html>
+

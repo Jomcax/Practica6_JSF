@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Practica 6</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandLink action="index" value="Inscripcion de curso" />
+            <p></p>
+            <h:commandLink action="productos" value="Registro de Productos" />
+            <p></p>
+            <h:commandLink action="libros" value="Registro de Libros" />
+            <p></p>
+            <h:commandLink action="usuarios" value="Registro de Usuarios" />
+            <p></p>
+            <h1>Registro de Libros</h1>
+            <table>
+                <tr>
+                    <td>Titulo</td>
+                    <td><h:inputText value="#{libroBean.titulo}"  /></td>
+                </tr>
+                <tr>
+                    <td>Autor</td>
+                    <td><h:inputText value="#{libroBean.autor}"  /></td>
+                </tr>
+                <tr>
+                    <td>Resumen</td>
+                    <td><h:inputTextarea  value = "#{libroBean.resumen}" cols = "50" rows = "10" > 
+                        </h:inputTextarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Medio</td>
+                    <td>
+                        <h:selectOneRadio value="#{libroBean.medio}">
+                             <f:selectItem itemValue="FISICO" itemLabel="Fisico" />
+                             <f:selectItem itemValue="MAGNETICO" itemLabel="Magnetico" />
+                        </h:selectOneRadio>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <h:commandButton action="#{libroBean.mostrarli()}" value="Enviar" />
+                    </td>
+                </tr>
+            </table>
+        </h:form>
+    </h:body>
+</html>
